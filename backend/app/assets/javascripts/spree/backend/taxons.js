@@ -72,4 +72,12 @@ Spree.ready(function() {
       }
     });
   });
+
+  $('.taxon-name-permalink').on("focus", function(e) {
+    var taxonNameFieldValue, splittedArray, resultPermalink;
+    taxonNameFieldValue = $('.taxon-name-field').val();
+    splittedArray = String.split(taxonNameFieldValue, ' ');
+    resultPermalink = Array.join(splittedArray, '-');
+    $('.taxon-name-permalink').val(resultPermalink.toLowerCase());
+  });
 });

@@ -2,7 +2,7 @@
   <div class="col-5">
     <%= f.field_container :name do %>
       <%= f.label :name, class: 'required' %><br />
-      <%= text_field :taxon, :name, class: 'fullwidth' %>
+      <%= text_field :taxon, :name, class: 'fullwidth taxon-name-field' %>
       <%= error_message_on :taxon, :name, class: 'fullwidth title' %>
     <% end %>
 
@@ -16,7 +16,7 @@
             </span>
           </div>
         <% end %>
-        <%= text_field_tag :permalink_part, @permalink_part, class: 'fullwidth form-control' %><br />
+        <%= text_field_tag :permalink_part, @permalink_part, class: 'fullwidth form-control taxon-name-permalink' %><br />
       </div>
     <% end %>
 
